@@ -1,0 +1,42 @@
+\documentclass[a4paper, 12pt]{article}
+
+%--------------------- settings without package imports    ---------------------%
+%% table of contents
+\renewcommand{\contentsname}{Table of contents}
+\setcounter{tocdepth}{2}
+
+
+%--------------------- package imports with their settings ---------------------%
+\usepackage[left=1.9cm,
+right=1.32cm,
+top=1.9cm,
+bottom=3.67cm,
+headsep=0.95cm,
+footskip=0.95cm]{geometry} %% Margin sizes intended for digital view,  add more margin for print
+\geometry{a4paper}
+
+%% cross-referencing
+\usepackage{hyperref}
+
+%% font family
+\usepackage{libertinus} %% Use libertinus font family as default, remove to use latex default Computer Modern instead
+
+
+% --------------------- document ---------------------- %
+\begin{document}
+%% title page
+\begin{titlepage}
+    \title{Software Requirements Specification Report \\ \textbf{\huge Project name}}
+    \author{Author Name, Organisation}
+    \maketitle
+\end{titlepage}
+
+    \tableofcontents
+    \newpage
+
+    \input{parts/Introduction.tex}
+    \input{parts/Overall_description.tex}
+    \input{parts/System_features.tex}
+    \input{parts/External_interface_requirements.tex}
+    \input{parts/Nonfunctional_requirements.tex}
+\end{document}
